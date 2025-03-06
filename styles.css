@@ -11,7 +11,7 @@ body {
     margin: 0;
     background-color: #121212;
     color: #ffffff;
-    background-image: url('/Assets/36.jpg');
+    background-image: url('Assets/36.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
