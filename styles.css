@@ -382,6 +382,7 @@ footer p {
 
 @media (max-width: 750px) {
     .contact-div {
+        width: 90%;
         flex-direction: column;
     }
 }
