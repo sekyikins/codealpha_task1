@@ -23,7 +23,7 @@ body {
 header {
     display: flex;
     position: fixed;
-    width: 100%;
+    width: 98%;
     background-color: rgba(0, 0, 0, 0.7);
     margin: 10px;
     padding: 15px 50px ;
@@ -221,8 +221,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    width: 85%;
+    width: 100%;
     text-align: center;
 }
 
@@ -235,7 +234,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     margin: 10px;
-    width: 100%;
+    width: 90%;
 }
 
 .about-container, .form-container {
@@ -311,16 +310,23 @@ input {
     background-color: #155670;
 }
 
-.links-div ul {
-    list-style: none;
-    padding: 5px;
-    margin: 0;
+.links-div {
+    width: 90%;
     display: flex;
     justify-content: center;
 }
 
+.links-div ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .links-div ul li {
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
 .links-div ul li a {
@@ -378,11 +384,4 @@ footer p {
     padding: 0 10px;
     color: #ffffff;
     cursor: default;
-}
-
-@media (max-width: 750px) {
-    .contact-div {
-        width: 90%;
-        flex-direction: column;
-    }
 }
