@@ -22,7 +22,7 @@ images.forEach(img => {
         if (img.classList.contains('gallery-item2')) {
             setTimeout(() => {
                 img.classList.remove('enlarged'); // Remove the enlarged class after the download prompt
-            }, 2000); // Adjust the timeout as needed
+            }, 5000); // Adjust the timeout as needed
         }
     });
 });
