@@ -32,7 +32,7 @@ function showDiscoverText() {
     clearTimeout(mouseMoveTimeout);
     mouseMoveTimeout = setTimeout(() => {
         discoverText.style.opacity = '0';
-    }, 1000); // Hide text after 3 seconds of inactivity
+    }, 1000); // Hide text after 1 seconds of inactivity
 }
 
 function showNextImage() {
@@ -51,6 +51,8 @@ function showPreviousImage() {
 }
 
 document.addEventListener('mousemove', showDiscoverText);
+document.addEventListener('touchstart', showDiscoverText);
+
 rightButton.addEventListener('click', showNextImage);
 leftButton.addEventListener('click', showPreviousImage);
 
