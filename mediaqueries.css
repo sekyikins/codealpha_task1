@@ -44,12 +44,12 @@
     }
     
     nav ul li a {
-        font-size: 10px;
+        font-size: 15px;
         text-align: center;
     }
     
     nav ul li a:hover {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .more-div img{
@@ -60,5 +60,22 @@
     .contact-div {
         width: 90%;
         flex-direction: column;
+    }
+
+    .links-div ul li {
+        margin: 7px 10px;
+    }
+    
+    .links-div ul li a {
+        font-size: 15px;
+    }
+    
+    .links-div ul li a:hover {
+        font-size: 10px;
+    }
+
+    .footer-div img {
+        height: 40px;
+        margin: 10px 25px;
     }
 }
