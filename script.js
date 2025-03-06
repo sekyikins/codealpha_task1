@@ -47,7 +47,7 @@ function showPreviousImage() {
     images[currentIndex].classList.add('slide-in-left', 'active');
     setTimeout(() => {
         images[currentIndex].classList.remove('slide-in-left');
-    }, 1000);
+    }, 3000);
 }
 
 document.addEventListener('mousemove', showDiscoverText);
