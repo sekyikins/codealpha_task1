@@ -1,4 +1,4 @@
-const images = document.querySelectorAll('.gallery-item1, .gallery-item2');
+const images = document.querySelectorAll('.gallery-item1, .gallery-item2, .sponsors');
 const discoverText = document.querySelector('.gallery-container h2');
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
@@ -6,6 +6,7 @@ let mouseMoveTimeout;
 let currentIndex = 0;
 
 images.forEach(img => {
+    img.setAttribute('draggable', 'false');
     img.addEventListener('click', () => {
         if (img.classList.contains('gallery-item2')) {
             const rect = img.getBoundingClientRect(); // Get the position of the image
