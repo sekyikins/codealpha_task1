@@ -10,20 +10,22 @@ images.forEach(img => {
         if (img.classList.contains('gallery-item2')) {
             img.classList.add('enlarged'); // Add the enlarged class only to gallery-item2
         }
-        const download = confirm("Do you want to download this image?");
-        if (download) {
-            const link = document.createElement('a');
-            link.href = img.src;
-            link.download = img.src.split('/').pop();
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-        if (img.classList.contains('gallery-item2')) {
-            setTimeout(() => {
-                img.classList.remove('enlarged'); // Remove the enlarged class after the download prompt
-            }, 5000); // Adjust the timeout as needed
-        }
+        setTimeout(() => {
+            const download = confirm("Do you want to download this image?");
+            if (download) {
+                const link = document.createElement('a');
+                link.href = img.src;
+                link.download = img.src.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            if (img.classList.contains('gallery-item2')) {
+                setTimeout(() => {
+                    img.classList.remove('enlarged'); // Remove the enlarged class after the download prompt
+                }, 5000);
+            }
+        }, 0);
     });
 });
 
@@ -32,7 +34,7 @@ function showDiscoverText() {
     clearTimeout(mouseMoveTimeout);
     mouseMoveTimeout = setTimeout(() => {
         discoverText.style.opacity = '0';
-    }, 1000); // Hide text after 1 seconds of inactivity
+    }, 2000); // Hide text after 2 seconds of inactivity
 }
 
 function showNextImage() {
