@@ -21,7 +21,7 @@ images.forEach(img => {
             // Force a reflow to apply the initial position
             clone.offsetHeight;
 
-            // Tansition to the center
+            // Transition to the center
             clone.style.top = '50%';
             clone.style.left = '50%';
             clone.style.transform = 'translate(-50%, -50%) scale(3.5)';
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value;
         const message = document.getElementById('password').value;
 
-        // Log the input values to the console (you can handle them as needed)
+        // Log the input values to the console
         console.log('Name:', name);
         console.log('Email:', email);
         console.log('Message:', message);
