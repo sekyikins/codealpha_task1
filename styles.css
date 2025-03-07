@@ -266,6 +266,16 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
+.brand {
+    background-color: rgb(67, 67, 186);
+    margin: 0;
+    font-size: 15px;
+    padding: 3px;
+    border: #ffffff 1.5px solid;
+    border-radius: 5px;
+    width: fit-content;
+}
+
 .captivate {
     padding: 15px;
     border-radius: 10px;
