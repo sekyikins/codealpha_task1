@@ -6,5 +6,6 @@
         "Canva",
         "Pexels",
         "Photoshop",
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
