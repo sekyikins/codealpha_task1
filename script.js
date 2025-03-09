@@ -3,7 +3,8 @@ const discoverText = document.querySelector('.gallery-container h2');
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
 let mouseMoveTimeout;
-let currentIndex = Math.floor(Math.random() * songs.length);
+let currentIndex = Math.floor(Math.random() * images.length);
+
 
 images.forEach(img => {
     img.setAttribute('draggable', 'false');
@@ -28,7 +29,7 @@ images.forEach(img => {
             clone.style.transform = 'translate(-50%, -50%) scale(3.5)';
 
             setTimeout(() => {
-                const download = confirm("Do you want to download this image?");
+                const download = confirm("Want to download this image?");
                 if (download) {
                     const link = document.createElement('a');
                     link.href = img.src;
@@ -59,16 +60,19 @@ function showDiscoverText() {
     }, 2500); // Hide text after 2.5 seconds of inactivity
 }
 
+images[currentIndex].classList.add('active');
+
 function showNextImage() {
     images[currentIndex].classList.remove('active');
     currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add('active');
+    images[currentIndex].classList.add('slide-in-right','active');
 }
 
 function showPreviousImage() {
     images[currentIndex].classList.remove('active');
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     images[currentIndex].classList.add('slide-in-left', 'active');
+
     setTimeout(() => {
         images[currentIndex].classList.remove('slide-in-left');
     }, 3000);
