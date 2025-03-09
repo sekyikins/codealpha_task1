@@ -3,7 +3,7 @@ const discoverText = document.querySelector('.gallery-container h2');
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
 let mouseMoveTimeout;
-let currentIndex = 0;
+let currentIndex = Math.floor(Math.random() * songs.length);
 
 images.forEach(img => {
     img.setAttribute('draggable', 'false');
