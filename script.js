@@ -5,6 +5,23 @@ const rightButton = document.querySelector('.right-button');
 let mouseMoveTimeout;
 let currentIndex = Math.floor(Math.random() * images.length);
 
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop
+                });
+            }
+        });
+    });
+});
 
 images.forEach(img => {
     img.setAttribute('draggable', 'false');
